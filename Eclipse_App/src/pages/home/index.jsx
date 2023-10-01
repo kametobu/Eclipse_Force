@@ -78,15 +78,15 @@ class Home extends React.Component {
                 <main>
                     {this.state.stars.map((item) => item)}
 
-                    <div className='Aling_PARALAX '>
+                    <div className='Aling_PARALAX'>
                         <Parallax pages={3} horizontal ref={this.parallax} className='PARALAX'>
                             <Page offset={0} onClick={() => this.scroll(1)} />
                             <Page offset={1} onClick={() => this.scroll(2)} />
                             <Page offset={2} onClick={() => this.scroll(0)} />
                         </Parallax>
                     </div>
-                    <div className='Aling_sol'>
-                        <div className='Sol' />
+                    <div className='Eclipse_lua'>
+                        <div className='Lua' />
                     </div>
                 </main>
 

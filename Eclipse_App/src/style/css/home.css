@@ -14,6 +14,7 @@ main {
     overflow-y: hidden;
 }
 
+
 .PAGE_1 {}
 
 .PAGE_2 {}
@@ -23,28 +24,27 @@ main {
 .PAGE_1,
 .PAGE_2,
 .PAGE_3 {
-
     display: flex;
-    position: relative;
-    top: 1rem;
-    justify-content: center;
     width: 100%;
     height: 100%;
+    justify-content: center;
 }
 
 .circulo_1 {
     width: 150px;
     height: 150px;
-    z-index: 2;
-    background-color: rgb(0, 220, 0);
+    top: 1rem;
+    background-color: var(--Amarelo_Escuro);
     border-radius: 50%;
+    position: relative;
+    z-index: 1;
+
 }
 
 .circulo_2 {
     width: 150px;
     height: 150px;
-
-    background-color: rgb(220, 0, 136);
+    background-color: var(--Amarelo_Escuro);
     border-radius: 50%;
 }
 
@@ -52,9 +52,7 @@ main {
 .circulo_3 {
     width: 150px;
     height: 150px;
-
-    background-color: rgb(0, 220, 11);
-
+    background-color: var(--Amarelo_Escuro);
     border-radius: 50%;
 }
 
@@ -67,19 +65,55 @@ main {
     background-color: white;
 }
 
-.Aling_sol {
+.Eclipse_lua {
     display: flex;
     width: 100%;
     height: 100%;
     justify-content: center;
 }
 
-.Sol {
-    width: 150px;
-    height: 150px;
-    top: 1rem;
-    background-color: rgb(255, 174, 0);
+.Lua {
+    width: 130px;
+    height: 130px;
+    top: 1.7rem;
+    left: 0.5rem;
+    background-color: white;
     border-radius: 50%;
     position: relative;
     z-index: 1;
+    transition-timing-function: ease;
+    animation-name: animate_lua;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+
 }
+
+@keyframes animate_lua {
+    0% {
+        transform:
+            translate(-500%, 80%)
+    }
+
+    100% {
+        transform:
+            translate(0%, 0%)
+    }
+}
+
+
+/* The animation code 
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
+  
+  /* The element to apply the animation to 
+  div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+  }
+  */

@@ -1,29 +1,43 @@
-function createStars(i) {
-    for (var i; i; i--) {
-      drawStars();
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: green;
+}
+
+.geeks {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: green;
+    border-radius: 13px;
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%) 
+                   perspective(200px) 
+                   rotateX(0deg) 
+                   rotateY(0deg);
     }
-  }
-  
-  function drawStars(){
-    var tmpStar = document.createElement('figure')
-    tmpStar.className = "star";
-    tmpStar.style.top = 100*Math.random()+'%';
-    tmpStar.style.left = 100*Math.random()+'%';
-    document.getElementById('stars').appendChild(tmpStar);
-  }
-  
-  function selectStars() {
-      stars = document.querySelectorAll(".star");
-    console.log(stars)
-  }
-  
-  function animateStars() {
-        Array.prototype.forEach.call(stars, function(el, i){
-        TweenMax.to(el, Math.random() * 0.5 + 0.5, {opacity: Math.random(), onComplete: animateStars});
-      });
-  }
-  
-  createStars(200);
-  selectStars();
-  animateStars();
-  
+
+    50% {
+        transform: translate(-50%, -50%) 
+                   perspective(200px) 
+                   rotateX(-180deg) 
+                   rotateY(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) 
+                   perspective(200px) 
+                   rotateX(-180deg) 
+                   rotateY(-180deg);
+    }
+}
