@@ -3,7 +3,7 @@ import DrawerAppBar from '../../components/menu/menu';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import '../../style/css/home.css';
 import { motion } from "framer-motion"
-
+import Box from '@mui/material/Box';
 
 const Page = ({ offset, gradient, onClick }) => (
     <>
@@ -42,17 +42,17 @@ class Home extends React.Component {
                 initial={{
                     top: 100 * Math.random() + '%',
                     left: 100 * Math.random() + '%',
-                    scale: 1.2 * Math.random() ,
+                    scale: 1.2 * Math.random(),
                 }}
                 animate={{
                     opacity: [0.1, 1, 0.1, 1, 0.1],
                 }}
-                transition={{ 
-                    duration: aletem , 
-                    ease: 'linear', 
-                    repeat: Infinity 
-                  }}
-               
+                transition={{
+                    duration: aletem,
+                    ease: 'linear',
+                    repeat: Infinity
+                }}
+
 
                 className='star'
 
@@ -72,10 +72,12 @@ class Home extends React.Component {
 
     render() {
         return (
-            <>
+            <div className='Conteiner'>
                 <DrawerAppBar />
+
                 <main>
                     {this.state.stars.map((item) => item)}
+
                     <div className='Aling_PARALAX '>
                         <Parallax pages={3} horizontal ref={this.parallax} className='PARALAX'>
                             <Page offset={0} onClick={() => this.scroll(1)} />
@@ -83,8 +85,12 @@ class Home extends React.Component {
                             <Page offset={2} onClick={() => this.scroll(0)} />
                         </Parallax>
                     </div>
+                    <div className='Aling_sol'>
+                        <div className='Sol' />
+                    </div>
                 </main>
-            </>
+
+            </div>
         )
     }
 }

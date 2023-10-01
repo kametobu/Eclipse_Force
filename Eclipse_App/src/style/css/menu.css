@@ -1,0 +1,9 @@
+.menu {
+    position: absolute;
+    z-index: 1;
+}
+
+.logo {
+    width: 7vw;
+    padding: 0.5rem;
+}

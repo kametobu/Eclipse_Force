@@ -1,3 +1,11 @@
+:root {
+  --Azul_Escuro: #1d2440;
+  --Azul_Claro: #20294c;
+  --Roxo: #49007e;
+  --Amarelo_Escuro: #ffb238;
+  --Amarelo_Claro: #fcc978;
+}
+
 #root {
   margin: 0;
   height: 100vh;
@@ -7,4 +15,10 @@
 html {
   overflow-x: hidden;
   overflow-y: hidden;
+}
+
+.Container {
+  display: grid;
+  grid-template-rows: 2fr, 4fr;
+  gap: 1rem;
 }

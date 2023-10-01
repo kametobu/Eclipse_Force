@@ -14,7 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import AdbIcon from '@mui/icons-material/Adb';
+import '../../style/css/menu.css';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
@@ -48,11 +48,10 @@ function DrawerAppBar(props) {
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <Box sx={{ display: 'flex', p: 4 }}>
+        <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar component="nav">
+            <AppBar component="nav" position="static" className='menu' style={{backgroundColor: 'black'}}>
                 <Toolbar>
-                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -67,7 +66,7 @@ function DrawerAppBar(props) {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
-                        MUI
+                        <img src='Logo.svg' className='logo' />
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
