@@ -33,11 +33,15 @@ main {
 .circulo_1 {
     width: 150px;
     height: 150px;
-    top: 1rem;
-    background-color: var(--Amarelo_Escuro);
+    top: 3rem;
+    background-image: linear-gradient(to bottom right, red, yellow);
+    ;
     border-radius: 50%;
     position: relative;
     z-index: 1;
+    -webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -12px 40px, ;
+    box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -12px 40px,
+        #FFF 0 -1px 8px, #ff0 0 2px 10px, #ff8000 0 10px 20px, red 0 12px 40px;
 
 }
 
@@ -73,11 +77,12 @@ main {
 }
 
 .Lua {
-    width: 130px;
-    height: 130px;
-    top: 1.7rem;
-    left: 0.5rem;
-    background-color: white;
+    width: 140px;
+    height: 140px;
+    top: 3.3rem;
+    left: 0.6rem;
+    background-image: url('../img/Lua.png');
+    background-size: cover;
     border-radius: 50%;
     position: relative;
     z-index: 1;
