@@ -6,14 +6,4 @@
   --Amarelo_Claro: #fcc978;
 }
 
-#root {
-  margin: 0;
-  height: 100vh;
-  width: 100vw;
-}
-
-html {
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
 

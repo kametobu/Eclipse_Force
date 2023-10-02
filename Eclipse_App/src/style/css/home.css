@@ -1,3 +1,15 @@
+#root {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+
+html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 main {
     margin: 0;
     height: 100vh;
@@ -10,6 +22,7 @@ main {
     z-index: -10;
 }
 
+
 .PARALAX {
     overflow-x: hidden;
     overflow-y: hidden;
@@ -20,7 +33,7 @@ main {
 
 .PAGE_1 {
     display: grid;
-    grid-template-columns: 4fr, 2fr,4fr;
+    grid-template-columns: 4fr, 2fr, 4fr;
     grid-template-rows: 1fr;
     grid-template-areas: 'Card1 Sol Card3';
     height: 100vh;
@@ -35,14 +48,18 @@ main {
     grid-area: Sol;
 }
 
-.col_3{
+.col_3 {
     grid-area: Card3;
 }
 
-.col_1, .col_3{
+.col_1,
+.col_3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-height: 500px;
+    margin: auto;
+    padding: 1rem;
 }
 
 
@@ -100,7 +117,7 @@ main {
     0% {
         transform:
             translate(-700%, 80%);
-            opacity: 1;
+        opacity: 1;
     }
 
 

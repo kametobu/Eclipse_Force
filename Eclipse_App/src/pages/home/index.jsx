@@ -1,15 +1,15 @@
 import React from 'react';
 import DrawerAppBar from '../../components/menu/menu';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import '../../style/css/home.css';
 import { motion } from "framer-motion"
 import MediaCard from '../../components/cards/card';
-
+import '../../style/css/home.css';
+import '../../style/css/mobile.css';
 import {
     CircleMenu,
     CircleMenuItem,
     TooltipPlacement,
-  } from "react-circular-menu";
+} from "react-circular-menu";
 
 const Page = ({ offset, gradient, onClick }) => (
     <>
@@ -67,60 +67,54 @@ class Home extends React.Component {
     }
 
 
-
     scroll(to) {
-       
         this.parallax.current.scrollTo(to)
-        
     }
 
     render() {
         return (
             <>
-            <div >
-                <DrawerAppBar />
-                <div className='Terra_aling'>
-                    <CircleMenu
-                      startAngle={-90}
-                      rotationAngle={360}
-                      itemSize={2}
-                      radius={5}
-                      rotationAngleInclusive={false}
-                      menuToggleElement={<div className='Terra'>&nbsp; &nbsp;</div>}
-                    >
-                      <CircleMenuItem onClick={() => this.scroll(1)} tooltip="PENUNBRA">
-                        <span className='LuaT'></span>
-                      </CircleMenuItem>
-                      <CircleMenuItem onClick={() => this.scroll(2)} tooltip="PARCIAL">
-                        <span className='LuaT'></span>
-                      </CircleMenuItem>
-                      <CircleMenuItem onClick={() => this.scroll(3)}  tooltip="DIAMANTE">
-                        <span className='LuaT'></span>
-                      </CircleMenuItem>
-                      <CircleMenuItem onClick={() => this.scroll(0)} tooltip="ANELAR">
-                        <span className='LuaT'></span>
-                      </CircleMenuItem>
-                    </CircleMenu>
-                </div>
-
-                <main>
-                    {this.state.stars.map((item) => item)}
-                    <div className={`circulo_1`} />
-                    <div className='Eclipse_lua'>
-                        <div className='Lua' />
+                <div >
+                    <DrawerAppBar />
+                    <div className='Terra_aling'>
+                        <CircleMenu
+                            startAngle={-90}
+                            rotationAngle={360}
+                            itemSize={2}
+                            radius={5}
+                            rotationAngleInclusive={false}
+                            menuToggleElement={<div className='Terra'>&nbsp; &nbsp;</div>}
+                        >
+                            <CircleMenuItem onClick={() => this.scroll(1)} tooltip="PENUNBRA">
+                                <span className='LuaT'></span>
+                            </CircleMenuItem>
+                            <CircleMenuItem onClick={() => this.scroll(2)} tooltip="PARCIAL">
+                                <span className='LuaT'></span>
+                            </CircleMenuItem>
+                            <CircleMenuItem onClick={() => this.scroll(3)} tooltip="DIAMANTE">
+                                <span className='LuaT'></span>
+                            </CircleMenuItem>
+                            <CircleMenuItem onClick={() => this.scroll(0)} tooltip="ANELAR">
+                                <span className='LuaT'></span>
+                            </CircleMenuItem>
+                        </CircleMenu>
                     </div>
                     <div className='Aling_PARALAX'>
-                        <Parallax pages={4} horizontal ref={this.parallax} className='PARALAX'>
-                            <Page offset={0}  />
-                            <Page offset={1}  />
+                        <Parallax pages={4} horizontal ref={this.parallax} className='PARALAX' style={{ height: '250vh'}}>
+                            <Page offset={0} />
+                            <Page offset={1} />
                             <Page offset={2} />
                             <Page offset={3} />
                         </Parallax>
                     </div>
-                    
-                    
-                </main>
-            </div>
+                    <main>
+                        {this.state.stars.map((item) => item)}
+                        <div className={`circulo_1`} />
+                        <div className='Eclipse_lua'>
+                            <div className='Lua' />
+                        </div>
+                    </main>
+                </div>
             </>
         )
     }

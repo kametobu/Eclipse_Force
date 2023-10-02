@@ -1,4 +1,5 @@
 .menu {
+    min-width: 10vh;
     position: absolute;
     z-index: 1;
 }
