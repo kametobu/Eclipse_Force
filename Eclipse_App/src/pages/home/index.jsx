@@ -3,14 +3,21 @@ import DrawerAppBar from '../../components/menu/menu';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import '../../style/css/home.css';
 import { motion } from "framer-motion"
-import Box from '@mui/material/Box';
+import MediaCard from '../../components/cards/card';
+
+import {
+    CircleMenu,
+    CircleMenuItem,
+    TooltipPlacement,
+  } from "react-circular-menu";
 
 const Page = ({ offset, gradient, onClick }) => (
     <>
-        <ParallaxLayer offset={offset} speed={0.2} onClick={onClick}>
+        <ParallaxLayer offset={offset} speed={0.2} >
             <div className='PAGE_1'>
-                <span>0{offset + 1}</span>
-                <div className={`circulo_${offset + 1}`} />
+                <div className='col_1'><MediaCard /></div>
+                <div className='Sol'></div>
+                <div className='col_3'><MediaCard /></div>
             </div>
         </ParallaxLayer>
     </>
@@ -20,10 +27,10 @@ class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            stars: []
+            stars: [],
+
         }
         this.parallax = React.createRef();
-
         this.scroll = this.scroll.bind(this);
         this.createStars = this.createStars.bind(this);
 
@@ -52,10 +59,7 @@ class Home extends React.Component {
                     ease: 'linear',
                     repeat: Infinity
                 }}
-
-
                 className='star'
-
                 key={i}
             />)
         }
@@ -65,32 +69,59 @@ class Home extends React.Component {
 
 
     scroll(to) {
-        if (this.parallax.current) {
-            this.parallax.current.scrollTo(to)
-        }
+       
+        this.parallax.current.scrollTo(to)
+        
     }
 
     render() {
         return (
-            <div className='Conteiner'>
+            <>
+            <div >
                 <DrawerAppBar />
+                <div className='Terra_aling'>
+                    <CircleMenu
+                      startAngle={-90}
+                      rotationAngle={360}
+                      itemSize={2}
+                      radius={5}
+                      rotationAngleInclusive={false}
+                      menuToggleElement={<div className='Terra'>&nbsp; &nbsp;</div>}
+                    >
+                      <CircleMenuItem onClick={() => this.scroll(1)} tooltip="PENUNBRA">
+                        <span className='LuaT'></span>
+                      </CircleMenuItem>
+                      <CircleMenuItem onClick={() => this.scroll(2)} tooltip="PARCIAL">
+                        <span className='LuaT'></span>
+                      </CircleMenuItem>
+                      <CircleMenuItem onClick={() => this.scroll(3)}  tooltip="DIAMANTE">
+                        <span className='LuaT'></span>
+                      </CircleMenuItem>
+                      <CircleMenuItem onClick={() => this.scroll(0)} tooltip="ANELAR">
+                        <span className='LuaT'></span>
+                      </CircleMenuItem>
+                    </CircleMenu>
+                </div>
 
                 <main>
                     {this.state.stars.map((item) => item)}
-
-                    <div className='Aling_PARALAX'>
-                        <Parallax pages={3} horizontal ref={this.parallax} className='PARALAX'>
-                            <Page offset={0} onClick={() => this.scroll(1)} />
-                            <Page offset={1} onClick={() => this.scroll(2)} />
-                            <Page offset={2} onClick={() => this.scroll(0)} />
-                        </Parallax>
-                    </div>
+                    <div className={`circulo_1`} />
                     <div className='Eclipse_lua'>
                         <div className='Lua' />
                     </div>
+                    <div className='Aling_PARALAX'>
+                        <Parallax pages={4} horizontal ref={this.parallax} className='PARALAX'>
+                            <Page offset={0}  />
+                            <Page offset={1}  />
+                            <Page offset={2} />
+                            <Page offset={3} />
+                        </Parallax>
+                    </div>
+                    
+                    
                 </main>
-
             </div>
+            </>
         )
     }
 }

@@ -17,8 +17,3 @@ html {
   overflow-y: hidden;
 }
 
-.Container {
-  display: grid;
-  grid-template-rows: 2fr, 4fr;
-  gap: 1rem;
-}

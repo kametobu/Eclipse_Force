@@ -28,9 +28,9 @@ function DrawerAppBar(props) {
     };
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }} >
             <Typography variant="h6" sx={{ my: 2 }}>
-                MUI
+                <img src='img/Logo.svg' className='logo' />
             </Typography>
             <Divider />
             <List>
@@ -50,7 +50,7 @@ function DrawerAppBar(props) {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar component="nav" position="static" className='menu' style={{backgroundColor: 'black'}}>
+            <AppBar component="nav" position="static" className='menu' sx={{backgroundColor: '#000'}} >
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -87,9 +87,11 @@ function DrawerAppBar(props) {
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     sx={{
+                        
                         display: { xs: 'block', sm: 'none' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#000' },
                     }}
+                    
                 >
                     {drawer}
                 </Drawer>
