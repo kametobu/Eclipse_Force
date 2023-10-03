@@ -15,9 +15,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import '../../style/css/menu.css';
-
+import { Link } from "react-router-dom";
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['Home', 'Solar', 'Lunar', 'Time'];
 
 function DrawerAppBar(props) {
     const { window } = props;
@@ -28,18 +28,20 @@ function DrawerAppBar(props) {
     };
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }} >
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', color: '#FFF' }} >
             <Typography variant="h6" sx={{ my: 2 }}>
-                <img src='img/Logo.svg' className='logo' />
+                <img src='Logo.png' className='logo' />
             </Typography>
             <Divider />
             <List>
                 {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }}>
-                            <ListItemText primary={item} />
-                        </ListItemButton>
-                    </ListItem>
+                    <Link to={item} className='btn_menu_mobile'>
+                        <ListItem key={item} disablePadding>
+                            <ListItemButton sx={{ textAlign: 'center' }} >
+                                <ListItemText primary={item} />
+                            </ListItemButton>
+                        </ListItem>
+                    </Link>
                 ))}
             </List>
         </Box>
@@ -50,7 +52,7 @@ function DrawerAppBar(props) {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar component="nav" position="static" className='menu' sx={{backgroundColor: '#000', zIndex: 20}} >
+            <AppBar component="nav" position="static" className='menu' sx={{ backgroundColor: '#000', zIndex: 20, color: '#FFF' }} >
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -66,13 +68,15 @@ function DrawerAppBar(props) {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
-                        <img src='img/Logo.svg' className='logo' />
+                        <img src='Logo.png' className='logo' />
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
-                            <Button key={item} sx={{ color: '#fff' }}>
-                                {item}
-                            </Button>
+                            <Link to={item}>
+                                <Button key={item} sx={{ color: '#fff' }}>
+                                    {item}
+                                </Button>
+                            </Link>
                         ))}
                     </Box>
                 </Toolbar>
@@ -87,11 +91,11 @@ function DrawerAppBar(props) {
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     sx={{
-                        
+
                         display: { xs: 'block', sm: 'none' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#000' },
                     }}
-                    
+
                 >
                     {drawer}
                 </Drawer>

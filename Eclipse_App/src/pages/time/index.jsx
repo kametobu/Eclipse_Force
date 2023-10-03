@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from "framer-motion"
-import '../../style/css/home.css';
+import '../../style/css/time.css';
 
-class Home extends React.Component {
+
+
+class Time extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -58,4 +60,4 @@ class Home extends React.Component {
 }
 
 
-export default Home;
+export default Time;

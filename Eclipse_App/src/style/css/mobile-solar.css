@@ -1,0 +1,56 @@
+@media screen and (max-width: 480px) {
+    #root {
+        margin: 0;
+        height: 300vh;
+        width: 100vw;
+    }
+
+
+    html {
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+    main {
+        margin: 0;
+        height: 300vh;
+        min-height: 350vh;
+        width: 100vw;
+        background-position: center;
+        background-size: cover;
+        background-color: black;
+        z-index: -10;
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+
+    .PARALAX {
+        min-height: 350vh;
+        height: 350vh;
+        z-index: 2;
+    }
+
+    .PAGE_1 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 115vh;
+        justify-content: space-between;
+    }
+
+    .col_1,
+    .col_3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding: 1rem;
+    }
+
+    .logo {
+        width: 20vw;
+        padding: 0.5rem;
+    }
+
+
+}

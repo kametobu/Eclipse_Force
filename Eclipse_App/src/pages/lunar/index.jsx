@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from "framer-motion"
-import '../../style/css/home.css';
+import '../../style/css/lunar.css';
 
-class Home extends React.Component {
+class Lunar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -42,7 +42,6 @@ class Home extends React.Component {
         this.setState({ stars: stars_create })
     }
 
-
     render() {
         return (
             <>
@@ -58,4 +57,4 @@ class Home extends React.Component {
 }
 
 
-export default Home;
+export default Lunar;

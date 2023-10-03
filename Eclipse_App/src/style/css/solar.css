@@ -1,0 +1,359 @@
+#root {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+main {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+    z-index: -10;
+}
+
+
+.PARALAX {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    top: 1.2rem;
+    z-index: 2;
+}
+
+
+.PAGE_1 {
+    display: grid;
+    grid-template-columns: 4fr, 2fr, 4fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'Card1 Sol Card3';
+    height: 100vh;
+    width: 100vw;
+}
+
+.col_1 {
+    grid-area: Card1;
+}
+
+.Sol {
+    grid-area: Sol;
+}
+
+.col_3 {
+    grid-area: Card3;
+}
+
+.col_1,
+.col_3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 1rem;
+}
+
+
+
+.circulo_1 {
+    width: 150px;
+    height: 150px;
+    top: 3rem;
+    margin: 0 auto;
+    background-image: linear-gradient(to bottom right, red, yellow);
+    ;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    -webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -12px 40px, ;
+    box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -12px 40px,
+        #FFF 0 -1px 8px, #ff0 0 2px 10px, #ff8000 0 10px 20px, red 0 12px 40px;
+}
+
+
+.star {
+    box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.4);
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.Eclipse_lua {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.Lua_SAIDA {
+    width: 140px;
+    height: 140px;
+    top: -6rem;
+    background-image: url('../img/Lua.png');
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition-timing-function: ease;
+    animation-name: animate_lua_Saida;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+
+}
+
+.Lua_TOTAL {
+    width: 140px;
+    height: 140px;
+    top: -6rem;
+    background-image: url('../img/Lua.png');
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition-timing-function: ease;
+    animation-name: animate_lua_Entrada;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    -webkit-box-shadow: 5px 5px 30px 20px #000000, inset 4px 4px 15px 0px #000000, inset 50px 50px 50px 50px rgba(0, 0, 0, 0.24), -5px -5px 5px 0px #000000, -5px 5px 5px 0px #000000, 5px -5px 5px 0px #000000;
+    box-shadow: 2px 2px 15px 35px rgb(0, 0, 0, 0.8), inset 4px 4px 15px 0px #000000, inset 50px 50px 50px 50px rgba(0, 0, 0, 0.5), -5px -5px 5px 0px #000000, -5px 5px 5px 0px #000000, 5px -5px 5px 0px #000000;
+}
+
+.Lua_SAIDA_TOTAL {
+    width: 140px;
+    height: 140px;
+    top: -6rem;
+    background-image: url('../img/Lua.png');
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition-timing-function: ease;
+    animation-name: animate_lua_Saida;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    -webkit-box-shadow: 5px 5px 30px 20px #000000, inset 4px 4px 15px 0px #000000, inset 50px 50px 50px 50px rgba(0, 0, 0, 0.24), -5px -5px 5px 0px #000000, -5px 5px 5px 0px #000000, 5px -5px 5px 0px #000000;
+    box-shadow: 2px 2px 15px 35px rgb(0, 0, 0, 0.8), inset 4px 4px 15px 0px #000000, inset 50px 50px 50px 50px rgba(0, 0, 0, 0.5), -5px -5px 5px 0px #000000, -5px 5px 5px 0px #000000, 5px -5px 5px 0px #000000;
+}
+
+.Lua_ANELAR {
+    width: 140px;
+    height: 140px;
+    top: -6rem;
+    background-image: url('../img/Lua.png');
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition-timing-function: ease;
+    animation-name: animate_lua_Entrada;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, inset 50px 50px 50px 50px rgba(0, 0, 0, 0.24), -5px -5px 5px 0px #000000, -5px 5px 5px 0px #000000, 5px -5px 5px 0px #000000;
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, inset 50px 50px 50px 50px rgba(0, 0, 0, 0.5), -5px -5px 5px 0px #000000, -5px 5px 5px 0px #000000, 5px -5px 5px 0px #000000;
+}
+
+.Lua_SAIDA_ANELAR {
+    width: 140px;
+    height: 140px;
+    top: -6rem;
+    background-image: url('../img/Lua.png');
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition-timing-function: ease;
+    animation-name: animate_lua_Saida;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, inset 50px 50px 50px 50px rgba(0, 0, 0, 0.24), -5px -5px 5px 0px #000000, -5px 5px 5px 0px #000000, 5px -5px 5px 0px #000000;
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, inset 50px 50px 50px 50px rgba(0, 0, 0, 0.5), -5px -5px 5px 0px #000000, -5px 5px 5px 0px #000000, 5px -5px 5px 0px #000000;
+}
+
+.Lua_PARCIAL {
+    width: 140px;
+    height: 140px;
+    top: -6rem;
+    left: -4rem;
+    background-image: url('../img/Lua.png');
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition-timing-function: ease;
+    animation-name: animate_lua_Entrada;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    -webkit-box-shadow: 7px 5px 10px 0px #000000, inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 7px 5px 10px 0px #000000, inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 10px rgba(0, 0, 0, 0.8);
+}
+
+.Lua_SAIDA_PARCIAL {
+    width: 140px;
+    height: 140px;
+    top: -6rem;
+    left: -4rem;
+    background-image: url('../img/Lua.png');
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition-timing-function: ease;
+    animation-name: animate_lua_Saida;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    -webkit-box-shadow: 7px 5px 10px 0px #000000, inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 7px 5px 10px 0px #000000, inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 10px rgba(0, 0, 0, 0.8);
+}
+
+
+.Lua_DIAMANTE {
+    width: 140px;
+    height: 140px;
+    top: -6rem;
+    left: -0.2rem;
+    background-image: url('../img/Lua.png');
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition-timing-function: ease;
+    animation-name: animate_lua_Entrada;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    -webkit-box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 20px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.Lua_SAIDA_DIAMANTE {
+    width: 140px;
+    height: 140px;
+    top: -6rem;
+    left: -0.2rem;
+    background-image: url('../img/Lua.png');
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition-timing-function: ease;
+    animation-name: animate_lua_Saida;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    -webkit-box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 20px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.Lua_PENUMBRA {
+    width: 140px;
+    height: 140px;
+    top: -6rem;
+    left: -12rem;
+    background-image: url('../img/Lua.png');
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition-timing-function: ease;
+    animation-name: animate_lua_Entrada;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    -webkit-box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 20px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.Lua_SAIDA_PENUMBRA {
+    width: 140px;
+    height: 140px;
+    top: -6rem;
+    left: -12rem;
+    background-image: url('../img/Lua.png');
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    transition-timing-function: ease;
+    animation-name: animate_lua_Saida;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    -webkit-box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 20px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes animate_lua_Entrada {
+    0% {
+        transform:
+            translate(-800%, 80%);
+    }
+
+
+    100% {
+        transform:
+            translate(0%, 0%);
+    }
+}
+
+@keyframes animate_lua_Saida {
+    0% {
+        transform:
+            translate(0%, 0%)
+    }
+
+    100% {
+        transform:
+            translate(800%, 80%)
+    }
+}
+
+.Terra_aling {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 100%;
+    bottom: 12vh;
+}
+
+.Terra {
+    width: 100px;
+    height: 100px;
+    background-image: url('../img/Terra.png');
+    background-size: cover;
+    cursor: pointer;
+}
+
+.TERRA_RANGE {
+    position: relative;
+    top: -120px;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.LuaT {
+    width: 2rem;
+    height: 2rem;
+    background-image: url('../img/Lua.png');
+    background-size: cover;
+    cursor: pointer;
+}
