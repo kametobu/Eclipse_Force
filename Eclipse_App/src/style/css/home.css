@@ -1,0 +1,23 @@
+.Home {
+    margin: 0;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+
+}
+
+
+
+.aling-cards-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aling-cards-home>img {
+    width: 100px;
+}

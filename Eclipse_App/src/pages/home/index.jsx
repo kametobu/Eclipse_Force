@@ -1,13 +1,15 @@
 import React from 'react';
 import { motion } from "framer-motion"
 import '../../style/css/home.css';
+import Grid from '@mui/material/Unstable_Grid2'; 
+import MediaCard from '../../components/cards/card';
 
 class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             stars: [],
-      
+
         }
         this.createStars = this.createStars.bind(this);
     }
@@ -45,14 +47,32 @@ class Home extends React.Component {
 
     render() {
         return (
-            <>
-            {this.state.stars.map((item) => item)}
-                <div>
-                    <main>
-                    
-                    </main>
-                </div>
-            </>
+            <div className='Home'>
+                    <Grid container spacing={12} >
+                      <Grid xs={2} sm={4} md={4} className='aling-cards-home'>
+                            <MediaCard img='terra.png'/>
+                      </Grid>
+                      <Grid xs={2} sm={4} md={4}>
+                            <MediaCard img='sol.png'/>
+                      </Grid>
+                      <Grid xs={2} sm={4} md={4}>
+                            <MediaCard img='lua.png'/>
+                      </Grid>
+                    </Grid>
+
+                    <Grid container spacing={12} >
+                      <Grid xs={2} sm={4} md={4} className='aling-cards-home'>
+                            <MediaCard img='terra.png'/>
+                      </Grid>
+                      <Grid xs={2} sm={4} md={4}>
+                            <MediaCard img='sol.png'/>
+                      </Grid>
+                      <Grid xs={2} sm={4} md={4}>
+                            <MediaCard img='lua.png'/>
+                      </Grid>
+                    </Grid>
+
+            </div>
         )
     }
 }

@@ -14,6 +14,10 @@ function Rotas() {
         <DrawerAppBar />
         <Routes>
           <Route
+            path=""
+            element={<Home />}
+          />
+          <Route
             path="Home"
             element={<Home />}
           />
