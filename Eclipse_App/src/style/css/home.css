@@ -23,15 +23,11 @@
     gap: 2rem;
 }
 
-.Home_items{
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    gap: 1rem;
-}
+
 
 .carrosel_home{
     grid-area: 'carrosel';
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 200px;
     grid-row: span 2;
 }
@@ -54,4 +50,32 @@
 
 .aling-cards-home>img {
     width: 100px;
+}
+
+.Home_items_List{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    
+}
+
+.Home_items{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: var(--Azul_Escuro_2);
+    color: white;
+}
+
+.img_nasa{
+    max-width: 200px;
+}
+
+.img_nasa_aling{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
