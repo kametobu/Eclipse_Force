@@ -17,7 +17,7 @@ import Button from '@mui/material/Button';
 import '../../style/css/menu.css';
 import { Link } from "react-router-dom";
 const drawerWidth = 240;
-const navItems = ['Home', 'Solar', 'Lunar', 'Time'];
+const navItems = ['Home', 'Solar', 'Lunar'];
 
 function DrawerAppBar(props) {
     const { window } = props;
@@ -88,8 +88,7 @@ function DrawerAppBar(props) {
                    
 
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                    <img src='Logo.png' className='logo_img'/>
-                    <img src='Logo.png' className='logo_img'/>
+                    
                     </Box>
                 </Toolbar>
             </AppBar>
