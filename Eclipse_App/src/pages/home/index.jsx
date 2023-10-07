@@ -221,7 +221,7 @@ class Home extends React.Component {
 
                     <div className='Home-Col_1'>
                         <div className='carrosel_home'>
-                            <CarroselHome imagens={this.state.imagens_nasa} />
+
                         </div>
                         <div className='Home_items_List'>
                             {this.state.nasa_api.map((item) => {
@@ -254,3 +254,5 @@ class Home extends React.Component {
 
 
 export default Home;
+
+// <CarroselHome imagens={this.state.imagens_nasa} />
