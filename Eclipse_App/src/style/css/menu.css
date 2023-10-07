@@ -5,9 +5,35 @@
 }
 
 .logo {
-    width: 7vw;
-    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.logo_name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    max-width: 350px;
+}
+
+.logo_img {
+    width: 5vw;
+    padding: 1rem;
     max-width: 120px;
+    min-width: 70px;
+}
+
+.logo_name>div>span {
+    font-family: 'space_range';
+    font-size: 1.2rem;
+}
+
+.logo_name>div {
+    font-family: 'space_range';
+    font-size: 1rem;
 }
 
 .btn_menu_mobile {
@@ -15,8 +41,13 @@
     text-decoration: none;
 }
 
-.TEXTO_TESTE {
-    color: var(--Amarelo_Escuro);
+.itens_menu_text {
+    color: #FFF;
     font-family: 'space_range';
     font-size: 1.2rem;
+}
+
+.itens_menu {
+    background-color: red;
+    justify-content: space-around;
 }

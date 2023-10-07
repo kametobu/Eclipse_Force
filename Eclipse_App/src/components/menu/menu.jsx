@@ -50,10 +50,10 @@ function DrawerAppBar(props) {
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex' }} >
             <CssBaseline />
-            <AppBar component="nav" position="static" className='menu' sx={{ backgroundColor: '#0c1024', zIndex: 20, color: '#FFF' }} >
-                <Toolbar>
+            <AppBar component="nav" position="static" sx={{ backgroundColor: '#0c1024', zIndex: 20, color: '#FFF'}} >
+                <Toolbar >
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -66,19 +66,30 @@ function DrawerAppBar(props) {
                     <Typography
                         variant="h6"
                         component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}
                     >
-                        <img src='Logo.png' className='logo' /> 
-                        <span>ECLIPSE FORCE</span>
+                        <div className='logo_name'>
+                            <img src='Logo.png' className='logo_img'/>
+                            <div><span>ECLIPSE</span> FORCE</div>
+                        </div>
+                        <div className='logo'>
+                           
+                                {navItems.map((item) => (
+                                    <Link to={item} >
+                                        <Button key={item}  >
+                                            <span className='itens_menu_text'> {item} </span>
+                                        </Button>
+                                    </Link>
+                                ))}
+                          
+                        </div>
                     </Typography>
+
+                   
+
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                        {navItems.map((item) => (
-                            <Link to={item} >
-                                <Button key={item}  >
-                                    <span className='TEXTO_TESTE'> {item} </span>
-                                </Button>
-                            </Link>
-                        ))}
+                    <img src='Logo.png' className='logo_img'/>
+                    <img src='Logo.png' className='logo_img'/>
                     </Box>
                 </Toolbar>
             </AppBar>

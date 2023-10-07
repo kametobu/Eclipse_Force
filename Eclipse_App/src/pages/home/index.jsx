@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion"
 import '../../style/css/home.css';
-
+import CarroselHome from '../../components/carroseul/carrosel';
 
 class Home extends React.Component {
     constructor(props) {
@@ -49,7 +49,9 @@ class Home extends React.Component {
             <div className='container_principal'>
                 <div className='Home'>
                     <div className='Home-Col_1'>
-                        <div></div>
+                        <div>
+                            <CarroselHome/>
+                        </div>
                         <div></div>
                     </div>
                     <div className='Home-Col_2'>
