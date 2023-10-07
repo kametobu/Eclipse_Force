@@ -2,7 +2,7 @@ import React from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { motion } from "framer-motion"
 import MediaCard from '../../components/cards/card';
-//import '../../style/css/solar.css';
+import '../../style/css/solar.css';
 //import '../../style/css/mobile-solar.css';
 
 

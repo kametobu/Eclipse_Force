@@ -55,15 +55,128 @@ class Home extends React.Component {
                     "title": "Snake in the Dark",
                     "url": "https://apod.nasa.gov/apod/image/0902/SGUSnakeLRVB_c800.jpg"
                 }
+            ],
+            imagens_nasa: [
+                {
+                    "href": "https://images-assets.nasa.gov/image/PIA10551/collection.json",
+                    "data": [
+                        {
+                            "center": "JPL",
+                            "title": "Enceladus in Eclipse",
+                            "nasa_id": "PIA10551",
+                            "date_created": "2009-01-07T13:50:41Z",
+                            "keywords": [
+                                "Enceladus",
+                                "Cassini-Huygens"
+                            ],
+                            "media_type": "image",
+                            "description_508": "Enceladus in Eclipse",
+                            "secondary_creator": "NASA/JPL/Space Science Institute",
+                            "description": "Enceladus in Eclipse"
+                        }
+                    ],
+                    "links": [
+                        {
+                            "href": "https://images-assets.nasa.gov/image/PIA10551/PIA10551~thumb.jpg",
+                            "rel": "preview",
+                            "render": "image"
+                        }
+                    ]
+                },
+                {
+                    "href": "https://images-assets.nasa.gov/image/PIA11508/collection.json",
+                    "data": [
+                        {
+                            "center": "JPL",
+                            "title": "Titan in Eclipse",
+                            "nasa_id": "PIA11508",
+                            "date_created": "2009-06-05T12:48:36Z",
+                            "keywords": [
+                                "Titan",
+                                "Cassini-Huygens"
+                            ],
+                            "media_type": "image",
+                            "description_508": "Titan in Eclipse",
+                            "secondary_creator": "NASA/JPL/Space Science Institute",
+                            "description": "Titan in Eclipse"
+                        }
+                    ],
+                    "links": [
+                        {
+                            "href": "https://images-assets.nasa.gov/image/PIA11508/PIA11508~thumb.jpg",
+                            "rel": "preview",
+                            "render": "image"
+                        }
+                    ]
+                },
+                {
+                    "href": "https://images-assets.nasa.gov/image/PIA10508/collection.json",
+                    "data": [
+                        {
+                            "center": "JPL",
+                            "title": "Tethys in Eclipse",
+                            "nasa_id": "PIA10508",
+                            "date_created": "2008-11-07T13:50:46Z",
+                            "keywords": [
+                                "Tethys",
+                                "Cassini-Huygens"
+                            ],
+                            "media_type": "image",
+                            "description_508": "Tethys in Eclipse",
+                            "secondary_creator": "NASA/JPL/Space Science Institute",
+                            "description": "Tethys in Eclipse"
+                        }
+                    ],
+                    "links": [
+                        {
+                            "href": "https://images-assets.nasa.gov/image/PIA10508/PIA10508~thumb.jpg",
+                            "rel": "preview",
+                            "render": "image"
+                        }
+                    ]
+                },
+                {
+                    "href": "https://images-assets.nasa.gov/image/PIA09353/collection.json",
+                    "data": [
+                        {
+                            "center": "JPL",
+                            "title": "Io in Eclipse",
+                            "nasa_id": "PIA09353",
+                            "date_created": "2007-05-01T17:00:06Z",
+                            "keywords": [
+                                "Io",
+                                "New Horizons"
+                            ],
+                            "media_type": "image",
+                            "description_508": "Io in Eclipse",
+                            "secondary_creator": "NASA/Johns Hopkins University Applied Physics Laboratory/Southwest   Research Institute",
+                            "description": "Io in Eclipse"
+                        }
+                    ],
+                    "links": [
+                        {
+                            "href": "https://images-assets.nasa.gov/image/PIA09353/PIA09353~thumb.jpg",
+                            "rel": "preview",
+                            "render": "image"
+                        }
+                    ]
+                }
             ]
         }
         this.createStars = this.createStars.bind(this);
     }
 
     componentDidMount() {
-        fetch('https://api.nasa.gov/planetary/apod?api_key=z4aO2lGyJdqkpj6QcLJoIGYDgVUnRUG32veg6rFM&count=5&thumbs=True').then((res) => res.json()).then((data) => {
-            this.setState({nasa_api: data})
-        })
+        //fetch('https://api.nasa.gov/planetary/apod?api_key=z4aO2lGyJdqkpj6QcLJoIGYDgVUnRUG32veg6rFM&count=5&thumbs=True').then((res) => res.json()).then((data) => {
+        //    console.log(data)
+        //    this.setState({nasa_api: data})
+        //})
+
+        //fetch('https://images-api.nasa.gov/search?q=eclipse&media_type=image&page_size=4').then((res) => res.json()).then((data) => {
+        //    console.log(data)
+        //    let imagens = data.collection.items.map((item)=>item)
+        //    this.setState({imagens_nasa: imagens})
+        //})
     }
 
     createStars(count) {
@@ -96,20 +209,22 @@ class Home extends React.Component {
     render() {
         return (
             <div className='container_principal'>
+                <img src='Cover.png'  className='equipe-Img'/>
                 <div className='Home'>
+
                     <div className='Home-Col_1'>
                         <div className='carrosel_home'>
-                            <CarroselHome />
+                            <CarroselHome imagens={this.state.imagens_nasa} />
                         </div>
                         <div className='Home_items_List'>
                             {this.state.nasa_api.map((item) => {
                                 return (<dev className='Home_items'>
                                     <div className='img_nasa_aling'>
-                                        <img src={item.url} className='img_nasa'/>
+                                        <img src={item.url} className='img_nasa' />
                                     </div>
-                                    <div>
-                                        <h2>{item.title}</h2>
+                                    <div className='txt_nasa'>
                                         <span>{item.date}</span>
+                                        <h2>{item.title}</h2>
                                         <p>{item.explanation}</p>
                                     </div>
                                 </dev>)
@@ -118,7 +233,7 @@ class Home extends React.Component {
                         </div>
                     </div>
                     <div className='Home-Col_2'>
-                        <div></div>
+                        <div><></></div>
                         <div></div>
                     </div>
                 </div>

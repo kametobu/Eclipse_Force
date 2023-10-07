@@ -13,9 +13,9 @@ const Page = ({ offset, gradient, onClick }) => (
     <>
         <ParallaxLayer offset={offset} speed={0.2} >
             <div className='PAGE_1'>
-                <div className='col_1'><MediaCard img='eclipse-lunar.png'/></div>
+                <div className='col_1'><MediaCard img='eclipse-lunar.png' /></div>
                 <div className='Sol'></div>
-                <div className='col_3'><MediaCard img='eclipse-lunar.png'/></div>
+                <div className='col_3'><MediaCard img='eclipse-lunar.png' /></div>
             </div>
         </ParallaxLayer>
     </>
