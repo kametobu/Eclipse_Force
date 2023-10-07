@@ -101,7 +101,7 @@ main {
 
 }
 
-.Lua_TOTAL_Lunar {
+.Lua_TOTAL_PERIGEU_Lunar {
     width: 140px;
     height: 140px;
     top: -6rem;
@@ -115,14 +115,12 @@ main {
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-direction: normal;
-    -webkit-box-shadow: 5px 5px 30px 20px #000000, inset 4px 4px 15px 0px #000000, inset 50px 50px 50px 50px rgba(0, 0, 0, 0.24), -5px -5px 5px 0px #000000, -5px 5px 5px 0px #000000, 5px -5px 5px 0px #000000;
-    box-shadow: 2px 2px 15px 35px rgb(0, 0, 0, 0.8), inset 4px 4px 15px 0px #000000, inset 50px 50px 50px 50px rgba(0, 0, 0, 0.5), -5px -5px 5px 0px #000000, -5px 5px 5px 0px #000000, 5px -5px 5px 0px #000000;
-}
+    -webkit-box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 80px 10px rgba(136, 47, 6, 0.5);
+    box-shadow: inset 8px 8px 15px 0px #2e0d00, inset 10px -10px 80px 20px rgba(136, 47, 6, 0.5);}
 
-.Lua_SAIDA_TOTAL_Lunar {
+.Lua_SAIDA_TOTAL_PERIGEU_Lunar {
     width: 140px;
     height: 140px;
-    top: -6rem;
     background-image: url('../img/Lua.png');
     background-size: cover;
     border-radius: 50%;
@@ -133,14 +131,15 @@ main {
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-direction: normal;
-    -webkit-box-shadow: 5px 5px 30px 20px #000000, inset 4px 4px 15px 0px #000000, inset 50px 50px 50px 50px rgba(0, 0, 0, 0.24), -5px -5px 5px 0px #000000, -5px 5px 5px 0px #000000, 5px -5px 5px 0px #000000;
-    box-shadow: 2px 2px 15px 35px rgb(0, 0, 0, 0.8), inset 4px 4px 15px 0px #000000, inset 50px 50px 50px 50px rgba(0, 0, 0, 0.5), -5px -5px 5px 0px #000000, -5px 5px 5px 0px #000000, 5px -5px 5px 0px #000000;
+    -webkit-box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 80px 10px rgba(136, 47, 6, 0.5);
+    box-shadow: inset 8px 8px 15px 0px #2e0d00, inset 10px -10px 80px 20px rgba(136, 47, 6, 0.5);
 }
 
-.Lua_ANELAR_Lunar {
+.Lua_PENUMBRA_Lunar1 {
     width: 140px;
     height: 140px;
     top: -6rem;
+    left: -14rem;
     background-image: url('../img/Lua.png');
     background-size: cover;
     border-radius: 50%;
@@ -155,10 +154,11 @@ main {
     box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, inset 50px 50px 50px 50px rgba(0, 0, 0, 0.5), -5px -5px 5px 0px #000000, -5px 5px 5px 0px #000000, 5px -5px 5px 0px #000000;
 }
 
-.Lua_SAIDA_ANELAR_Lunar {
+.Lua_SAIDA_PENUMBRA_Lunar2{
     width: 140px;
     height: 140px;
     top: -6rem;
+    left: -14rem;
     background-image: url('../img/Lua.png');
     background-size: cover;
     border-radius: 50%;
@@ -177,7 +177,7 @@ main {
     width: 140px;
     height: 140px;
     top: -6rem;
-    left: -4rem;
+    left: -8rem;
     background-image: url('../img/Lua.png');
     background-size: cover;
     border-radius: 50%;
@@ -188,15 +188,15 @@ main {
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-direction: normal;
-    -webkit-box-shadow: 7px 5px 10px 0px #000000, inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 10px rgba(0, 0, 0, 0.8);
-    box-shadow: 7px 5px 10px 0px #000000, inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 10px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 7px 5px 10px 0px #000000, inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 10px rgba(0, 0, 0, 0.8), inset -17px 10px 10px 20px rgba(136, 47, 6, 0.5), inset -15px 10px 10px 2px rgba(136, 47, 6, 0.5);
+    box-shadow: 7px 5px 10px 0px #000000, inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 10px rgba(0, 0, 0, 0.8), inset -17px 10px 10px 20px rgba(136, 47, 6, 0.5), inset -15px 10px 10px 2px rgba(136, 47, 6, 0.5);
 }
 
 .Lua_SAIDA_PARCIAL_Lunar {
     width: 140px;
     height: 140px;
     top: -6rem;
-    left: -4rem;
+    left: -8rem;
     background-image: url('../img/Lua.png');
     background-size: cover;
     border-radius: 50%;
@@ -207,16 +207,16 @@ main {
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-direction: normal;
-    -webkit-box-shadow: 7px 5px 10px 0px #000000, inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 10px rgba(0, 0, 0, 0.8);
-    box-shadow: 7px 5px 10px 0px #000000, inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 10px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 7px 5px 10px 0px #000000, inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 10px rgba(0, 0, 0, 0.8), inset -17px 10px 10px 20px rgba(136, 47, 6, 0.5), inset -15px 10px 10px 2px rgba(136, 47, 6, 0.5);
+    box-shadow: 7px 5px 10px 0px #000000, inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 10px rgba(0, 0, 0, 0.8), inset -17px 10px 10px 20px rgba(136, 47, 6, 0.5), inset -15px 10px 10px 2px rgba(136, 47, 6, 0.5);
 }
 
 
-.Lua_DIAMANTE_Lunar {
-    width: 140px;
-    height: 140px;
-    top: -6rem;
-    left: -0.2rem;
+.Lua_TOTAL_APOGEU_Lunar {
+    width: 120px;
+    height: 120px;
+    top: -4rem;
+    left: 1rem;
     background-image: url('../img/Lua.png');
     background-size: cover;
     border-radius: 50%;
@@ -227,15 +227,14 @@ main {
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-direction: normal;
-    -webkit-box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 20px 10px rgba(0, 0, 0, 0.5);
-    box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 20px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 80px 10px rgba(136, 47, 6, 0.5);
+    box-shadow: inset 8px 8px 15px 0px #2e0d00, inset 10px -10px 80px 20px rgba(136, 47, 6, 0.5);
 }
 
-.Lua_SAIDA_DIAMANTE_Lunar {
-    width: 140px;
-    height: 140px;
-    top: -6rem;
-    left: -0.2rem;
+.Lua_SAIDA_TOTAL_APOGEU_Lunar {
+    width: 120px;
+    height: 120px;
+    top: -4rem;
     background-image: url('../img/Lua.png');
     background-size: cover;
     border-radius: 50%;
@@ -246,15 +245,15 @@ main {
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-direction: normal;
-    -webkit-box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 20px 10px rgba(0, 0, 0, 0.5);
-    box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 20px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 80px 10px rgba(136, 47, 6, 0.5);
+    box-shadow: inset 8px 8px 15px 0px #2e0d00, inset 10px -10px 80px 20px rgba(136, 47, 6, 0.5);
 }
 
 .Lua_PENUMBRA_Lunar {
     width: 140px;
     height: 140px;
     top: -6rem;
-    left: -12rem;
+    left: -10rem;
     background-image: url('../img/Lua.png');
     background-size: cover;
     border-radius: 50%;
@@ -265,8 +264,8 @@ main {
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-direction: normal;
-    -webkit-box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 20px 10px rgba(0, 0, 0, 0.5);
-    box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 20px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 4px 4px 15px 0px rgb(0, 0, 0,0.5), inset 10px -10px 20px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 4px 4px 15px 60px rgb(0, 0, 0,0.5), inset 10px -10px 30px 30px rgba(0, 0, 0, 0.5);
 }
 
 .Lua_SAIDA_PENUMBRA_Lunar {
@@ -284,8 +283,8 @@ main {
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-direction: normal;
-    -webkit-box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 20px 10px rgba(0, 0, 0, 0.5);
-    box-shadow: inset 4px 4px 15px 0px #000000, inset 10px -10px 10px 20px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 4px 4px 15px 0px rgb(0, 0, 0,0.5), inset 10px -10px 20px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 4px 4px 15px 60px rgb(0, 0, 0,0.5), inset 10px -10px 30px 30px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes animate_lua_Entrada_Lunar {
@@ -321,6 +320,7 @@ main {
     height: 10vh;
     width: 100%;
     top: 30vh;
+    left: 3vw;
 }
 
 .Terra_Lunar {

@@ -29,8 +29,8 @@ class Solar extends React.Component {
         super(props);
         this.state = {
             stars: [],
-            eclipse: "ANELAR",
-            eclipse_anterior: "ANELAR",
+            eclipse: "PENUMBRA",
+            eclipse_anterior: "PENUMBRA",
             imagens_nasa: [
                 {
                     "href": "https://images-assets.nasa.gov/image/PIA10551/collection.json",
@@ -141,7 +141,7 @@ class Solar extends React.Component {
         this.parallax = React.createRef();
         this.scroll = this.scroll.bind(this);
         this.createStars = this.createStars.bind(this);
-        this.estagios = ["TOTAL", "PARCIAL", "DIAMANTE", "ANELAR"]
+        this.estagios = ["TOTAL_PERIGEU", "PARCIAL", "TOTAL_APOGEU", "PENUMBRA"]
     }
 
     componentDidMount() {
@@ -180,7 +180,8 @@ class Solar extends React.Component {
 
 
     scroll(to) {
-        this.setState({ eclipse: 'SAIDA_' + this.state.eclipse_anterior + "_Lunar" })
+        console.log('SAIDA_' + this.state.eclipse_anterior  )
+        this.setState({ eclipse: 'SAIDA_' + this.state.eclipse_anterior })
         this.parallax.current.scrollTo(to)
         setTimeout(() => {
             this.setState({ eclipse: this.estagios[to], eclipse_anterior: this.estagios[to] })
@@ -191,74 +192,73 @@ class Solar extends React.Component {
     render() {
         return (
             <>
-            <div className='container_principal'>
-                <div className='Solar_page'>
-                    <div className='Solar_col1'>
-                        <div>
-                            <div className='Video'>
-                                <iframe width="1200px" height='650px' src="https://www.youtube.com/embed/WQFyKsnesyo?si=LowqLJa6ya4Q0MQu?rel=0&amp;autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div className='container_principal'>
+                    <div className='Solar_page'>
+                        <div className='Solar_col1'>
+                            <div>
+                                <div className='Video'>
+                                    <iframe width="1200px" height='650px' src="https://www.youtube.com/embed/WQFyKsnesyo?si=LowqLJa6ya4Q0MQu?rel=0&amp;autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div>
+                                <img src='Post.png' />
                             </div>
                         </div>
-                        <div>
-                            <img src='Post.png' />
-                        </div>
-                    </div>
-                    <div className='Solar_col2'>
-                        <div className='Terra_aling_Lunar'>
-                            <CircleMenu
-                                startAngle={-90}
-                                rotationAngle={360}
-                                itemSize={2}
-                                radius={5}
-                                rotationAngleInclusive={false}
-                                menuToggleElement={<div className='Terra'>&nbsp; &nbsp;</div>}
-                            >
-
-                                <CircleMenuItem onClick={() => this.scroll(1)} tooltip="PARCIAL">
-                                    <span className='LuaT'></span>
-                                </CircleMenuItem>
-                                <CircleMenuItem onClick={() => this.scroll(2)} tooltip="DIAMANTE">
-                                    <span className='LuaT'></span>
-                                </CircleMenuItem>
-                                <CircleMenuItem onClick={() => this.scroll(3)} tooltip="ANELAR">
-                                    <span className='LuaT'></span>
-                                </CircleMenuItem>
-                                <CircleMenuItem onClick={() => this.scroll(0)} tooltip="TOTAL">
-                                    <span className='LuaT'></span>
-                                </CircleMenuItem>
-                            </CircleMenu>
-                        </div>
-                        <div className='Aling_PARALAX'>
-                            <Parallax pages={5} horizontal ref={this.parallax} className='PARALAX'>
-                                <Page offset={0} />
-                                <Page offset={1} />
-                                <Page offset={2} />
-                                <Page offset={3} />
-                            </Parallax>
-                        </div>
-                        <main>
-                            {this.state.stars.map((item) => item)}
-                            <div className={`circulo_1`} />
-                            <div className='Eclipse_lua_Lunar'>
-                                <div className={`Lua_${this.state.eclipse}_Lunar`} id='Lua' />
+                        <div className='Solar_col2'>
+                            <div className='Terra_aling_Lunar'>
+                                <CircleMenu
+                                    startAngle={-90}
+                                    rotationAngle={360}
+                                    itemSize={2}
+                                    radius={5}
+                                    rotationAngleInclusive={false}
+                                    menuToggleElement={<div className='Terra'>&nbsp; &nbsp;</div>}
+                                >
+                                    <CircleMenuItem onClick={() => this.scroll(1)} tooltip="PARCIAL">
+                                        <span className='LuaT'></span>
+                                    </CircleMenuItem>
+                                    <CircleMenuItem onClick={() => this.scroll(2)} tooltip="TOTAL_APOGEU">
+                                        <span className='LuaT'></span>
+                                    </CircleMenuItem>
+                                    <CircleMenuItem onClick={() => this.scroll(3)} tooltip="PENUMBRA">
+                                        <span className='LuaT'></span>
+                                    </CircleMenuItem>
+                                    <CircleMenuItem onClick={() => this.scroll(0)} tooltip="TOTAL_PERIGEU">
+                                        <span className='LuaT'></span>
+                                    </CircleMenuItem>
+                                </CircleMenu>
                             </div>
-                        </main>
-                    </div>
-                    <div className='Solar_col3'>
-                        <ImageList sx={{ width: '100%' , p: 3}} cols={3} >
-                            {this.state.imagens_nasa.map((item) => (
-                                <ImageListItem >
-                                    <img
-                                        src={item.links[0].href}
-                                        loading="lazy"
-                                    />
-                                </ImageListItem>
-                            ))}
-                        </ImageList>
+                            <div className='Aling_PARALAX'>
+                                <Parallax pages={5} horizontal ref={this.parallax} className='PARALAX'>
+                                    <Page offset={0} />
+                                    <Page offset={1} />
+                                    <Page offset={2} />
+                                    <Page offset={3} />
+                                </Parallax>
+                            </div>
+                            <main>
+                                {this.state.stars.map((item) => item)}
+                                <div className={`circulo_1`} />
+                                <div className='Eclipse_lua_Lunar'>
+                                    <div className={`Lua_${this.state.eclipse}_Lunar`} id='Lua' />
+                                </div>
+                            </main>
+                        </div>
+                        <div className='Solar_col3'>
+                            <ImageList sx={{ width: '100%', p: 3 }} cols={3} >
+                                {this.state.imagens_nasa.map((item) => (
+                                    <ImageListItem >
+                                        <img
+                                            src={item.links[0].href}
+                                            loading="lazy"
+                                        />
+                                    </ImageListItem>
+                                ))}
+                            </ImageList>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </>
+            </>
         )
     }
 }
