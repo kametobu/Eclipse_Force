@@ -2,8 +2,8 @@ import React from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { motion } from "framer-motion"
 import MediaCard from '../../components/cards/card';
-import '../../style/css/solar.css';
-import '../../style/css/mobile-solar.css';
+//import '../../style/css/solar.css';
+//import '../../style/css/mobile-solar.css';
 
 
 import {
@@ -15,9 +15,9 @@ const Page = ({ offset, gradient, onClick }) => (
     <>
         <ParallaxLayer offset={offset} speed={0.2} >
             <div className='PAGE_1'>
-                <div className='col_1'><MediaCard img='eclipse-solar.png'/></div>
+                <div className='col_1'><MediaCard img='eclipse-solar.png' /></div>
                 <div className='Sol'></div>
-                <div className='col_3'><MediaCard img='eclipse-solar.png'/></div>
+                <div className='col_3'><MediaCard img='eclipse-solar.png' /></div>
             </div>
         </ParallaxLayer>
     </>

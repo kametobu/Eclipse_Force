@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion"
 import '../../style/css/home.css';
-import Grid from '@mui/material/Unstable_Grid2'; 
-import MediaCard from '../../components/cards/card';
+
 
 class Home extends React.Component {
     constructor(props) {
@@ -15,7 +14,7 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
-        this.createStars(200)
+
     }
 
     createStars(count) {
@@ -26,7 +25,7 @@ class Home extends React.Component {
             stars_create.push(<motion.figure
                 initial={{
                     top: 100 * Math.random() + '%',
-                    left: 100 * Math.random() + '%',
+                    left: 90 * Math.random() + '%',
                     scale: 1.2 * Math.random(),
                 }}
                 animate={{
@@ -47,31 +46,17 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div className='Home'>
-                    <Grid container spacing={12} >
-                      <Grid xs={2} sm={4} md={4} className='aling-cards-home'>
-                            <MediaCard img='terra.png'/>
-                      </Grid>
-                      <Grid xs={2} sm={4} md={4}>
-                            <MediaCard img='sol.png'/>
-                      </Grid>
-                      <Grid xs={2} sm={4} md={4}>
-                            <MediaCard img='lua.png'/>
-                      </Grid>
-                    </Grid>
-
-                    <Grid container spacing={12} >
-                      <Grid xs={2} sm={4} md={4} className='aling-cards-home'>
-                            <MediaCard img='terra.png'/>
-                      </Grid>
-                      <Grid xs={2} sm={4} md={4}>
-                            <MediaCard img='sol.png'/>
-                      </Grid>
-                      <Grid xs={2} sm={4} md={4}>
-                            <MediaCard img='lua.png'/>
-                      </Grid>
-                    </Grid>
-
+            <div className='container_principal'>
+                <div className='Home'>
+                    <div className='Home-Col_1'>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div className='Home-Col_2'>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
             </div>
         )
     }

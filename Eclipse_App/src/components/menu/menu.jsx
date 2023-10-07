@@ -28,7 +28,7 @@ function DrawerAppBar(props) {
     };
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', color: '#FFF' }} >
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', color: '#0c1024' }} >
             <Typography variant="h6" sx={{ my: 2 }}>
                 <img src='Logo.png' className='logo' />
             </Typography>
@@ -52,7 +52,7 @@ function DrawerAppBar(props) {
     return (
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar component="nav" position="static" className='menu' sx={{ backgroundColor: '#000', zIndex: 20, color: '#FFF' }} >
+            <AppBar component="nav" position="static" className='menu' sx={{ backgroundColor: '#0c1024', zIndex: 20, color: '#FFF' }} >
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -68,13 +68,14 @@ function DrawerAppBar(props) {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                     >
-                        <img src='Logo.png' className='logo' />
+                        <img src='Logo.png' className='logo' /> 
+                        <span>ECLIPSE FORCE</span>
                     </Typography>
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
-                            <Link to={item}>
-                                <Button key={item} sx={{ color: '#fff' }}>
-                                    {item}
+                            <Link to={item} >
+                                <Button key={item}  >
+                                    <span className='TEXTO_TESTE'> {item} </span>
                                 </Button>
                             </Link>
                         ))}

@@ -7,8 +7,16 @@
 .logo {
     width: 7vw;
     padding: 0.5rem;
+    max-width: 120px;
 }
-.btn_menu_mobile{
+
+.btn_menu_mobile {
     color: white;
     text-decoration: none;
+}
+
+.TEXTO_TESTE {
+    color: var(--Amarelo_Escuro);
+    font-family: 'space_range';
+    font-size: 1.2rem;
 }
