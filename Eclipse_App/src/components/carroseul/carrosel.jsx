@@ -4,18 +4,7 @@ import { Paper, Button } from '@mui/material'
 
 
 function CarroselHome(props) {
-    var items = [
-        {
-            name: "Random Name #1",
-            description: "Probably the most random thing you have ever seen!"
-
-        },
-        {
-            name: "Random Name #2",
-            description: "Hello World!"
-        }
-    ]
-
+    var items = props.imagens
     return (
         <Carousel
             autoPlay
@@ -24,7 +13,7 @@ function CarroselHome(props) {
             duration={1500}
             height={500}
             navButtonsAlwaysVisible
-           
+
         >
             {
                 items.map((item, i) => <Item key={i} item={item} />)
@@ -35,8 +24,8 @@ function CarroselHome(props) {
 
 function Item(props) {
     return (
-        <Paper >
-            <img src='SLIDE.jpg' className='Imagens_slide'/>
+        <Paper>
+            <img src={props.item.links[0].href} className='Imagens_slide' />
         </Paper>
     )
 }
