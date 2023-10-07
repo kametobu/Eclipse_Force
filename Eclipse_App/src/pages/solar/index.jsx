@@ -214,7 +214,6 @@ class Solar extends React.Component {
                                     rotationAngleInclusive={false}
                                     menuToggleElement={<div className='Terra'>&nbsp; &nbsp;</div>}
                                 >
-
                                     <CircleMenuItem onClick={() => this.scroll(1)} tooltip="PARCIAL">
                                         <span className='LuaT'></span>
                                     </CircleMenuItem>
