@@ -2,7 +2,7 @@
     display: grid;
     margin: 0 auto;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr;
     grid-template-areas: 'sol1' 'sol2' 'sol3';
 }
 
@@ -10,12 +10,16 @@
     grid-area: 'sol1';
     width: 90vw;
     position: relative;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    padding: 2rem;
 }
 
 .Solar_col3 {
     grid-area: 'sol3';
     width: 90vw;
     position: relative;
+    margin: 0 auto;
 }
 
 
