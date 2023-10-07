@@ -12,11 +12,25 @@
 .Home-Col_1 {
     grid-area: 'home_col1';
     grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr, 2fr;
+    grid-template-areas: 'carrosel' 'items';
+    background-color: red;
 }
+
+.carrosel_home{
+    grid-area: 'carrosel';
+    padding: 2rem;
+    border-radius: 200px;
+}
+
+.items_home{
+    grid-area: 'items';
+}
+
 
 .Home-Col_2 {
     grid-area: 'home_col2';
-    background-color: rgb(77, 77, 77);
+    grid-template-columns: 1fr 3fr;
 }
 
 .aling-cards-home {

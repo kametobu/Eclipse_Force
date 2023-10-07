@@ -49,7 +49,7 @@ class Home extends React.Component {
             <div className='container_principal'>
                 <div className='Home'>
                     <div className='Home-Col_1'>
-                        <div>
+                        <div className='carrosel_home'>
                             <CarroselHome/>
                         </div>
                         <div></div>
