@@ -50,9 +50,17 @@ class Home extends React.Component {
                 <div className='Home'>
                     <div className='Home-Col_1'>
                         <div className='carrosel_home'>
-                            <CarroselHome/>
+                            <CarroselHome />
                         </div>
-                        <div></div>
+                        <div className='Home_items'>
+                            {[1,2,3].map(() => {
+                                return (<>
+                                    <div><img src='Logo.png'/></div>
+                                    <div>2</div>
+                                </>)
+                            })}
+
+                        </div>
                     </div>
                     <div className='Home-Col_2'>
                         <div></div>
