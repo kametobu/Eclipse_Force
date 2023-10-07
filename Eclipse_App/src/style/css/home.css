@@ -47,6 +47,7 @@
 .Home-Col_2 {
     grid-area: 'home_col2';
     grid-template-columns: 1fr 3fr;
+    padding: 1rem;
 }
 
 .aling-cards-home {
@@ -107,4 +108,11 @@
 
 .equipe-Img {
     width: 100%;
+}
+
+
+.Video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

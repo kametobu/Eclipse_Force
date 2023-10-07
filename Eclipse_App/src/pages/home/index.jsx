@@ -209,7 +209,12 @@ class Home extends React.Component {
     render() {
         return (
             <div className='container_principal'>
-                <img src='Cover.png'  className='equipe-Img'/>
+                <img src='Cover.png' className='equipe-Img' />
+
+                <div className='Video'>
+                    <iframe width="1200px" height='650px' src="https://www.youtube.com/embed/0evMqlMrOP0?si=XwMoc2pd3hmJg_By?rel=0&amp;autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+
                 <div className='Home'>
 
                     <div className='Home-Col_1'>
@@ -233,8 +238,9 @@ class Home extends React.Component {
                         </div>
                     </div>
                     <div className='Home-Col_2'>
-                        <div><></></div>
-                        <div></div>
+                        <div><img src='Post.png' /></div>
+                        <div><img src='Follow.png' /></div>
+
                     </div>
                 </div>
             </div>
