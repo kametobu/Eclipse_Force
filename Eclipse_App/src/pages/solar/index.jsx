@@ -17,7 +17,7 @@ const Page = ({ offset, gradient, onClick }) => (
             <div className='PAGE_1'>
                 <div className='col_1'><MediaCard img='eclipse-solar.png' /></div>
                 <div className='Sol'></div>
-                <div className='col_3'><MediaCard img='eclipse-solar.png' /></div>
+                <div className='col_3'></div>
             </div>
         </ParallaxLayer>
     </>
@@ -80,47 +80,57 @@ class Solar extends React.Component {
     render() {
         return (
             <>
-                <div >
-
-                    <div className='Terra_aling'>
-                        <CircleMenu
-                            startAngle={-90}
-                            rotationAngle={360}
-                            itemSize={2}
-                            radius={5}
-                            rotationAngleInclusive={false}
-                            menuToggleElement={<div className='Terra'>&nbsp; &nbsp;</div>}
-                        >
-
-                            <CircleMenuItem onClick={() => this.scroll(1)} tooltip="PARCIAL">
-                                <span className='LuaT'></span>
-                            </CircleMenuItem>
-                            <CircleMenuItem onClick={() => this.scroll(2)} tooltip="DIAMANTE">
-                                <span className='LuaT'></span>
-                            </CircleMenuItem>
-                            <CircleMenuItem onClick={() => this.scroll(3)} tooltip="ANELAR">
-                                <span className='LuaT'></span>
-                            </CircleMenuItem>
-                            <CircleMenuItem onClick={() => this.scroll(0)} tooltip="TOTAL">
-                                <span className='LuaT'></span>
-                            </CircleMenuItem>
-                        </CircleMenu>
-                    </div>
-                    <div className='Aling_PARALAX'>
-                        <Parallax pages={5} horizontal ref={this.parallax} className='PARALAX' style={{ height: '250vh' }}>
-                            <Page offset={0} />
-                            <Page offset={1} />
-                            <Page offset={2} />
-                            <Page offset={3} />
-                        </Parallax>
-                    </div>
-                    <main>
-                        {this.state.stars.map((item) => item)}
-                        <div className={`circulo_1`} />
-                        <div className='Eclipse_lua'>
-                            <div className={`Lua_${this.state.eclipse}`} id='Lua' />
+                <div className='container_principal'>
+                    <div className='Solar_page'>
+                        <div className='Solar_col1'>
+                            <div>2212</div>
                         </div>
-                    </main>
+                        <div className='Solar_col2'>
+                            <div className='Terra_aling'>
+                                <CircleMenu
+                                    startAngle={-90}
+                                    rotationAngle={360}
+                                    itemSize={2}
+                                    radius={5}
+                                    rotationAngleInclusive={false}
+                                    menuToggleElement={<div className='Terra'>&nbsp; &nbsp;</div>}
+                                >
+
+                                    <CircleMenuItem onClick={() => this.scroll(1)} tooltip="PARCIAL">
+                                        <span className='LuaT'></span>
+                                    </CircleMenuItem>
+                                    <CircleMenuItem onClick={() => this.scroll(2)} tooltip="DIAMANTE">
+                                        <span className='LuaT'></span>
+                                    </CircleMenuItem>
+                                    <CircleMenuItem onClick={() => this.scroll(3)} tooltip="ANELAR">
+                                        <span className='LuaT'></span>
+                                    </CircleMenuItem>
+                                    <CircleMenuItem onClick={() => this.scroll(0)} tooltip="TOTAL">
+                                        <span className='LuaT'></span>
+                                    </CircleMenuItem>
+                                </CircleMenu>
+                            </div>
+                            <div className='Aling_PARALAX'>
+                                <Parallax pages={5} horizontal ref={this.parallax} className='PARALAX'>
+                                    <Page offset={0} />
+                                    <Page offset={1} />
+                                    <Page offset={2} />
+                                    <Page offset={3} />
+                                </Parallax>
+                            </div>
+                            <main>
+                                {this.state.stars.map((item) => item)}
+                                <div className={`circulo_1`} />
+                                <div className='Eclipse_lua'>
+                                    <div className={`Lua_${this.state.eclipse}`} id='Lua' />
+                                </div>
+                            </main>
+                        </div>
+
+                        <div className='Solar_col3'>
+                            <div>2212</div>
+                        </div>
+                    </div>
                 </div>
             </>
         )

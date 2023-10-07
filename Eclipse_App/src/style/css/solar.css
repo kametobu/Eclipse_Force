@@ -1,3 +1,34 @@
+.Solar_page {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 'sol1' 'sol2' 'sol3';
+}
+
+.Solar_col1 {
+    grid-area: 'sol1';
+    width: 90vw;
+    position: relative;
+}
+
+.Solar_col3 {
+    grid-area: 'sol3';
+    width: 90vw;
+    position: relative;
+}
+
+
+.Solar_col2 {
+    grid-area: 'sol2';
+    width: 70vw;
+    margin: 0 auto;
+    height: 80vh;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 main {
     margin: 0;
     height: 100vh;
@@ -24,8 +55,7 @@ main {
     grid-template-columns: 4fr, 2fr, 4fr;
     grid-template-rows: 1fr;
     grid-template-areas: 'Card1 Sol Card3';
-    height: 100vh;
-    width: 100vw;
+
 }
 
 .col_1 {

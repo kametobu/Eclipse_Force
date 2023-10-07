@@ -167,16 +167,16 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
-        //fetch('https://api.nasa.gov/planetary/apod?api_key=z4aO2lGyJdqkpj6QcLJoIGYDgVUnRUG32veg6rFM&count=5&thumbs=True').then((res) => res.json()).then((data) => {
-        //    console.log(data)
-        //    this.setState({nasa_api: data})
-        //})
+        fetch('https://api.nasa.gov/planetary/apod?api_key=z4aO2lGyJdqkpj6QcLJoIGYDgVUnRUG32veg6rFM&count=5&thumbs=True').then((res) => res.json()).then((data) => {
+            console.log(data)
+            this.setState({nasa_api: data})
+        })
 
-        //fetch('https://images-api.nasa.gov/search?q=eclipse&media_type=image&page_size=4').then((res) => res.json()).then((data) => {
-        //    console.log(data)
-        //    let imagens = data.collection.items.map((item)=>item)
-        //    this.setState({imagens_nasa: imagens})
-        //})
+        fetch('https://images-api.nasa.gov/search?q=eclipse&media_type=image&page_size=4').then((res) => res.json()).then((data) => {
+            console.log(data)
+            let imagens = data.collection.items.map((item)=>item)
+            this.setState({imagens_nasa: imagens})
+        })
     }
 
     createStars(count) {
