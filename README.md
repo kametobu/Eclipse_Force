@@ -14,7 +14,7 @@ Share the link https://eclipse-force.vercel.app/
 
 ## Our experiment
 
-We stablished a relationship with two business specialists, a physical education teacher that teaches young people, and an astronomer with expertise in telescopes, astrophotography and dissemination of scientific informatino.
+We stablished a relationship with two business specialists, a physical education teacher that teaches young people, and an astronomer with expertise in telescopes, astrophotography and dissemination of scientific information.
 With this roles we produced a hub that connects high level verified contents, like the articles on Nasa Api, confident youtube channels and functinal resources. These contents are shareable and easily integrated into normal school activities,
 remotely or in place.
 
