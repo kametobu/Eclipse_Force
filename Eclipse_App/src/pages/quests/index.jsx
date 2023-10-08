@@ -19,7 +19,7 @@ class Quests extends React.Component {
             resposta_quest: '',
             respostas: ['1'],
             nota: 0,
-            send: true,
+            send: false,
             quests: [
                 {
                     'pergunta': "Why do only some people on Earth see an eclipse at a given time?",
@@ -69,20 +69,20 @@ class Quests extends React.Component {
     }
 
     resposta_questao() {
-    
-        if (this.state.resposta_quest.length > 0) {
-        //this.setState({ respostas_user: [...this.state.respostas_user, this.state.resposta_quest] })
-        let nota = 0
 
-        this.state.respostas.map((item, index)=>{
-             if (item === this.state.resposta_quest){
-                nota++
-             }
-             
-         })  
-         nota = (nota/this.state.respostas.length) * 10
-         this.setState({nota: nota, send: true})
-            
+        if (this.state.resposta_quest.length > 0) {
+            //this.setState({ respostas_user: [...this.state.respostas_user, this.state.resposta_quest] })
+            let nota = 0
+
+            this.state.respostas.map((item, index) => {
+                if (item === this.state.resposta_quest) {
+                    nota++
+                }
+
+            })
+            nota = (nota / this.state.respostas.length) * 10
+            this.setState({ nota: nota, send: true })
+
         }
     }
 
@@ -95,68 +95,68 @@ class Quests extends React.Component {
                 <div className='container_principal' style={{ backgroundColor: "#000" }}>
 
                     <div className='Quests-grid'>
-                        
+
                         <div> {this.state.stars.map((item) => item)}</div>
                         <div className='container_quests'>
                             <div></div>
                             <div className='card_quests'>
-                                {this.state.send?<>  
-                                            <div className='Nota'>
-                                                <h2>NOTA</h2>
-                                                <p>{this.state.nota}</p>
-                                            </div> 
-                                            <div className='rocket'>
-                                                <RocketLaunchIcon  sx={{ fontSize: '8rem'}}/>
-                                            </div> 
-                                            <div className='send_resp'>
-                                                <div>
-                                                    <Button variant="contained" onClick={() => this.setState({send: false})} endIcon={<RefreshIcon />}>
-                                                        
-                                                    </Button>
-                                                </div>
-                                            </div> 
-                                </>:<>
-                                {this.state.quests.map((item) => {
-                                    return (
-                                        <>
-                                            <div className='Pergunta'>
-                                                <p>{item.pergunta}</p>
-                                            </div>
-                                            <div className='respostas'>
-                                                <FormControl>
-                                                    <RadioGroup
-                                                        aria-labelledby="demo-radio-buttons-group-label"
-                                                        name="radio-buttons-group"
-                                                        value={this.state.resposta_quest}
-                                                        onChange={(e) => this.setState({ resposta_quest: e.target.value })}
-                                                    >
-                                                        {item.posiveis_respostas.map((item, index) => {
-                                                            return (
-                                                                <ol type='a'>
-                                                                    <li><FormControlLabel value={index+1} control={<Radio />} label={<> {item}</>} /></li>
-                                                                </ol>
-                                                            )
-                                                        })}
-                                                    </RadioGroup>
-                                                </FormControl>
+                                {this.state.send ? <>
+                                    <div className='Nota'>
+                                        <h2>NOTA</h2>
+                                        <p>{this.state.nota}</p>
+                                    </div>
+                                    <div className='rocket'>
+                                        <RocketLaunchIcon sx={{ fontSize: '8rem' }} />
+                                    </div>
+                                    <div className='send_resp'>
+                                        <div>
+                                            <Button variant="contained" onClick={() => this.setState({ send: false })} endIcon={<RefreshIcon />}>
 
-                                            </div>
-                                            <div className='send_resp'>
-                                                <div>
-                                                    <Button variant="contained" disabled>
-                                                        Next
-                                                    </Button>
-                                                    &nbsp;
-                                                    <Button variant="contained" onClick={() => this.resposta_questao()} endIcon={<SendIcon />}>
-                                                        Send
-                                                    </Button>
+                                            </Button>
+                                        </div>
+                                    </div>
+                                </> : <>
+                                    {this.state.quests.map((item) => {
+                                        return (
+                                            <>
+                                                <div className='Pergunta'>
+                                                    <p>{item.pergunta}</p>
                                                 </div>
-                                            </div>
-                                        </>
-                                    )
-                                })}
+                                                <div className='respostas'>
+                                                    <FormControl>
+                                                        <RadioGroup
+                                                            aria-labelledby="demo-radio-buttons-group-label"
+                                                            name="radio-buttons-group"
+                                                            value={this.state.resposta_quest}
+                                                            onChange={(e) => this.setState({ resposta_quest: e.target.value })}
+                                                        >
+                                                            {item.posiveis_respostas.map((item, index) => {
+                                                                return (
+                                                                    <ol type='a'>
+                                                                        <li><FormControlLabel value={index + 1} control={<Radio />} label={<> {item}</>} /></li>
+                                                                    </ol>
+                                                                )
+                                                            })}
+                                                        </RadioGroup>
+                                                    </FormControl>
+
+                                                </div>
+                                                <div className='send_resp'>
+                                                    <div>
+                                                        <Button variant="contained" disabled>
+                                                            Next
+                                                        </Button>
+                                                        &nbsp;
+                                                        <Button variant="contained" onClick={() => this.resposta_questao()} endIcon={<SendIcon />}>
+                                                            Send
+                                                        </Button>
+                                                    </div>
+                                                </div>
+                                            </>
+                                        )
+                                    })}
                                 </>}
-                                
+
                             </div>
                             <div></div>
                         </div>
