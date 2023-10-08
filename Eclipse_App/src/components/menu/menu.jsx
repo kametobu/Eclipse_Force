@@ -52,7 +52,7 @@ function DrawerAppBar(props) {
     return (
         <Box sx={{ display: 'flex' }} >
             <CssBaseline />
-            <AppBar component="nav" position="static" sx={{ backgroundColor: '#0c1024', zIndex: 20, color: '#FFF'}} >
+            <AppBar component="nav" position="static" sx={{ backgroundColor: '#0c1024', zIndex: 20, color: '#FFF' }} >
                 <Toolbar >
                     <IconButton
                         color="inherit"
@@ -69,26 +69,28 @@ function DrawerAppBar(props) {
                         sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}
                     >
                         <div className='logo_name'>
-                            <img src='Logo.png' className='logo_img'/>
+                            <img src='Logo.png' className='logo_img' />
                             <div><span>ECLIPSE</span> FORCE</div>
                         </div>
                         <div className='logo'>
-                           
-                                {navItems.map((item) => (
-                                    <Link to={item} >
-                                        <Button key={item}  >
-                                            <span className='itens_menu_text'> {item} </span>
-                                        </Button>
-                                    </Link>
-                                ))}
-                          
+
+                            {navItems.map((item) => (
+                                <Link to={item} >
+                                    <Button key={item}  >
+                                        <span className='itens_menu_text'> {item} </span>
+                                    </Button>
+                                </Link>
+                            ))}
+
                         </div>
                     </Typography>
 
-                   
+
 
                     <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                    
+                        <a href='https://github.com/kametobu/Eclipse_Force' target='__blanck'>
+                            <img src='git.png' className='logo_git' />
+                        </a>
                     </Box>
                 </Toolbar>
             </AppBar>

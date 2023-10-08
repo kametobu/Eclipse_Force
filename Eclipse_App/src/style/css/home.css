@@ -34,7 +34,7 @@
 
 .carrosel_home {
     grid-area: 'carrosel';
-    padding: 1rem;
+    
     border-radius: 200px;
     grid-row: span 2;
 }
