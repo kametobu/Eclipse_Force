@@ -1,0 +1,67 @@
+@media screen and (max-width: 600px) {
+    .Home {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'home_col3', 'home_col1 home_col2';
+        margin: 0 5%;
+        min-height: 200vh;
+        width: 90%;
+        padding: 0;
+    }
+
+    .Home_items_List {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0;
+
+    }
+
+    .Home_items {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 20px;
+        background-color: var(--Azul_Escuro_2);
+        color: white;
+    }
+
+    .videos_you {
+        width: 90vw;
+        height: 30vh;
+    }
+
+
+    .Solar_col1 {
+        grid-area: 'sol1';
+        width: 90vw;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .Quests-grid {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0.5rem;
+    }
+
+    .col_1 {
+        display: none;
+    }
+
+    .logo_img {
+        width: 10rem;
+        padding: 1rem;
+        max-width: 250px;
+        min-width: 70px;
+    }
+
+}
+
+.nr-webreader {
+    display: none;
+}
