@@ -5,6 +5,7 @@ import Home from './pages/home';
 import Solar from './pages/solar';
 import Time from './pages/time';
 import Lunar from './pages/lunar';
+import Quests from './pages/quests';
 
 function Rotas() {
   return (
@@ -30,8 +31,8 @@ function Rotas() {
             element={<Lunar />}
           />
           <Route
-            path="Time"
-            element={<Time />}
+            path="Quests"
+            element={<Quests />}
           />
         </Routes>
       </BrowserRouter>
