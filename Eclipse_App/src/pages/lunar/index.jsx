@@ -230,6 +230,7 @@ class Solar extends React.Component {
                                 </CircleMenu>
                             </div>
                             <div className='Aling_PARALAX'>
+                            <span className='Interacao'>Click on Earth</span>
                                 <Parallax pages={5} horizontal ref={this.parallax} className='PARALAX'>
                                     <Page offset={0} />
                                     <Page offset={1} />

@@ -367,3 +367,12 @@ main {
     background-size: cover;
     cursor: pointer;
 }
+
+.Interacao{
+    color: white;
+    font-weight: bold;
+    padding-left: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    margin-left: 50%;
+}

@@ -203,12 +203,14 @@ class Solar extends React.Component {
                             </div>
                         </div>
                         <div className='Solar_col2'>
+                        
                             <div className='Terra_aling'>
                                 <CircleMenu
                                     startAngle={-90}
                                     rotationAngle={360}
                                     itemSize={2}
                                     radius={5}
+                                    
                                     rotationAngleInclusive={false}
                                     menuToggleElement={<div className='Terra'>&nbsp; &nbsp;</div>}
                                 >
@@ -227,21 +229,30 @@ class Solar extends React.Component {
                                 </CircleMenu>
                             </div>
                             <div className='Aling_PARALAX'>
+                            <span className='Interacao'>Click on Earth</span>
                                 <Parallax pages={5} horizontal ref={this.parallax} className='PARALAX'>
                                     <Page offset={0} />
                                     <Page offset={1} />
                                     <Page offset={2} />
                                     <Page offset={3} />
                                 </Parallax>
+                                
                             </div>
+                            
                             <main>
+                                
                                 {this.state.stars.map((item) => item)}
                                 <div className={`circulo_1`} />
                                 <div className='Eclipse_lua'>
                                     <div className={`Lua_${this.state.eclipse}`} id='Lua' />
                                 </div>
+                                
                             </main>
+                            
+                            
                         </div>
+
+                        
                         <div className='Solar_col3'>
                         <span style={{ color: '#FFF' }}><img src="nasa.png" className='with_nasa'/></span>
                             <ImageList sx={{ width: '100%' , p: 3}} cols={3} >
