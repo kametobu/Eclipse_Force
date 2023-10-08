@@ -1,5 +1,6 @@
 .Quests-grid {
     height: 100vh;
+    
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
 }
@@ -50,4 +51,18 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+}
+
+.Nota{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    flex-direction: column;
+}
+
+.rocket{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
