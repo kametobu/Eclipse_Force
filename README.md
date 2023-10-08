@@ -18,10 +18,10 @@ We stablished a relationship with two business specialists, a physical education
 With this roles we produced a hub that connects high level verified contents, like the articles on Nasa Api, confident youtube channels and functinal resources. These contents are shareable and easily integrated into normal school activities,
 remotely or in place.
 
-![](https://github.com/ricardodarocha/Eclipse_Force/blob/main/Design/Demo/Experience.PNG)
+![](https://github.com/ricardodarocha/Eclipse_Force/blob/main/Design/Demo/Experience.jpg)
 Drawing of students
 Minas Gerais, Brazil
 
-![](https://github.com/ricardodarocha/Eclipse_Force/blob/main/Design/Demo/FabianoFetter.PNG)
+![](https://github.com/ricardodarocha/Eclipse_Force/blob/main/Design/Demo/FabianoFetter.png)
 Youtube channel of partner Fabiano Fetter
 Rio Grande do Sul, Brazil
