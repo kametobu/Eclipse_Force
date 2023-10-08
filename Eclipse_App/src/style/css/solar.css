@@ -401,3 +401,9 @@ main {
     background-size: cover;
     cursor: pointer;
 }
+
+
+.videos_you{
+    width:1200px;
+    height:650px;
+}

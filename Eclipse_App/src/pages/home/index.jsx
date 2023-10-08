@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion"
 import '../../style/css/home.css';
-import CarroselHome from '../../components/carroseul/carrosel';
+
 
 class Home extends React.Component {
     constructor(props) {

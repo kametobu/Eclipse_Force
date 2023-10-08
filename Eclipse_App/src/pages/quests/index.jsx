@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion"
 import '../../style/css/quests.css';
+import '../../style/css/mobile.css';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import Radio from '@mui/material/Radio';
@@ -132,8 +133,8 @@ class Quests extends React.Component {
                                                         >
                                                             {item.posiveis_respostas.map((item, index) => {
                                                                 return (
-                                                                    <ol type='a'>
-                                                                        <li><FormControlLabel value={index + 1} control={<Radio />} label={<> {item}</>} /></li>
+                                                                    <ol className='alternativas_list'>
+                                                                        <li className='alternativas'><FormControlLabel value={index + 1} control={<Radio />}  />{item}</li>
                                                                     </ol>
                                                                 )
                                                             })}
@@ -162,9 +163,9 @@ class Quests extends React.Component {
                         </div>
                         <div></div>
                     </div>
-                    
+
                 </div>
-                
+
             </>
         )
     }

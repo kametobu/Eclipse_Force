@@ -1,5 +1,5 @@
 .Quests-grid {
-    height: 100vh;
+    min-height: 100vh;
     
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
@@ -65,4 +65,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.alternativas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alternativas_list{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
 }

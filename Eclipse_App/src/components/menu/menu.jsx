@@ -15,6 +15,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import '../../style/css/menu.css';
+
 import { Link } from "react-router-dom";
 const drawerWidth = 240;
 const navItems = ['Home', 'Solar', 'Lunar', 'Quests'];
@@ -30,7 +31,7 @@ function DrawerAppBar(props) {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', color: '#0c1024' }} >
             <Typography variant="h6" sx={{ my: 2 }}>
-                <img src='Logo.png' className='logo' />
+                <img src='Logo.png' className='logo_img' />
             </Typography>
             <Divider />
             <List>

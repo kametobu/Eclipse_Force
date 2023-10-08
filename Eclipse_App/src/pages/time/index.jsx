@@ -1,9 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion"
 //import '../../style/css/time.css';
-
-
-
 class Time extends React.Component {
     constructor(props) {
         super(props);

@@ -5,8 +5,6 @@ import MediaCard from '../../components/cards/card';
 import '../../style/css/solar.css';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-//import '../../style/css/mobile-solar.css';
-
 
 import {
     CircleMenu,
@@ -197,7 +195,7 @@ class Solar extends React.Component {
                         <div className='Solar_col1'>
                             <div>
                                 <div className='Video'>
-                                    <iframe width="1200px" height='650px' src="https://www.youtube.com/embed/WQFyKsnesyo?si=LowqLJa6ya4Q0MQu?rel=0&amp;autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe className='videos_you' src="https://www.youtube.com/embed/WQFyKsnesyo?si=LowqLJa6ya4Q0MQu?rel=0&amp;autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                 </div>
                             </div>
                             <div>
