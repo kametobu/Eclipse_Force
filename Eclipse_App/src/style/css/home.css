@@ -116,3 +116,7 @@
     justify-content: center;
     align-items: center;
 }
+
+.with_nasa{
+    max-width: 250px;
+}

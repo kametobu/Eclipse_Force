@@ -224,7 +224,7 @@ class Home extends React.Component {
 
                         </div>
                         <div className='Home_items_List'>
-                        <span style={{ color: '#FFF' }}>info by https://api.nasa.gov - APOD </span>
+                        <span style={{ color: '#FFF' }}><img src="nasa.png" className='with_nasa'/></span>
                             {this.state.nasa_api.map((item) => {
                                 return (<dev className='Home_items'>
                                     <div className='img_nasa_aling'>

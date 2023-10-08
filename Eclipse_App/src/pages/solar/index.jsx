@@ -245,7 +245,7 @@ class Solar extends React.Component {
                             </main>
                         </div>
                         <div className='Solar_col3'>
-                        <span style={{ color: '#FFF' }}>images by https://images.nasa.gov </span>
+                        <span style={{ color: '#FFF' }}><img src="nasa.png" className='with_nasa'/></span>
                             <ImageList sx={{ width: '100%' , p: 3}} cols={3} >
                                 {this.state.imagens_nasa.map((item) => (
                                     <ImageListItem >
