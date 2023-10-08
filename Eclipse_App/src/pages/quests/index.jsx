@@ -102,7 +102,7 @@ class Quests extends React.Component {
                             <div className='card_quests'>
                                 {this.state.send ? <>
                                     <div className='Nota'>
-                                        <h2>NOTA</h2>
+                                        <h2>Note</h2>
                                         <p>{this.state.nota}</p>
                                     </div>
                                     <div className='rocket'>
