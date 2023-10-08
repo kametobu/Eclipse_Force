@@ -6,3 +6,12 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+# Links APIs
+- - https://api.nasa.gov/planetary/apod
+- - https://images-api.nasa.gov
+
+# Links IFRAMES
+- - https://eyes.nasa.gov/apps/solar-system/#/story/annular_solar_eclipse
+- - https://www.youtube.com/embed/WQFyKsnesyo?si=LowqLJa6ya4Q0MQu?rel=0&amp;autoplay=1&mute=1
