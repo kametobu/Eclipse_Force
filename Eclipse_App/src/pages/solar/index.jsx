@@ -11,11 +11,11 @@ import {
     CircleMenuItem
 } from "react-circular-menu";
 
-const Page = ({ offset, gradient, onClick }) => (
+const Page = ({ offset, gradient, onClick, eclipse }) => (
     <>
         <ParallaxLayer offset={offset} speed={0.2} >
             <div className='PAGE_1'>
-                <div className='col_1'><MediaCard img='eclipse-solar.png' /></div>
+                <div className='col_1'>{eclipse?<MediaCard img={`eclipse-solar-${eclipse}.png`} />:<></>}</div>
                 <div className='Sol'></div>
                 <div className='col_3'></div>
             </div>
@@ -203,14 +203,14 @@ class Solar extends React.Component {
                             </div>
                         </div>
                         <div className='Solar_col2'>
-                        
+
                             <div className='Terra_aling'>
                                 <CircleMenu
                                     startAngle={-90}
                                     rotationAngle={360}
                                     itemSize={2}
                                     radius={5}
-                                    
+
                                     rotationAngleInclusive={false}
                                     menuToggleElement={<div className='Terra'>&nbsp; &nbsp;</div>}
                                 >
@@ -229,33 +229,28 @@ class Solar extends React.Component {
                                 </CircleMenu>
                             </div>
                             <div className='Aling_PARALAX'>
-                            <span className='Interacao'>Click on Earth</span>
+                                <span className='Interacao'>Click on Earth</span>
                                 <Parallax pages={5} horizontal ref={this.parallax} className='PARALAX'>
-                                    <Page offset={0} />
-                                    <Page offset={1} />
-                                    <Page offset={2} />
-                                    <Page offset={3} />
+                                    <Page offset={0} eclipse={this.state.eclipse} />
+                                    <Page offset={1} eclipse={this.state.eclipse} />
+                                    <Page offset={2} eclipse={this.state.eclipse} />
+                                    <Page offset={3} eclipse={this.state.eclipse} />
                                 </Parallax>
-                                
+
                             </div>
-                            
+
                             <main>
-                                
                                 {this.state.stars.map((item) => item)}
                                 <div className={`circulo_1`} />
                                 <div className='Eclipse_lua'>
                                     <div className={`Lua_${this.state.eclipse}`} id='Lua' />
                                 </div>
-                                
                             </main>
-                            
-                            
-                        </div>
 
-                        
+                        </div>
                         <div className='Solar_col3'>
-                        <span style={{ color: '#FFF' }}><img src="nasa.png" className='with_nasa'/></span>
-                            <ImageList sx={{ width: '100%' , p: 3}} cols={3} >
+                            <span style={{ color: '#FFF' }}><img src="nasa.png" className='with_nasa' /></span>
+                            <ImageList sx={{ width: '100%', p: 3 }} cols={3} >
                                 {this.state.imagens_nasa.map((item) => (
                                     <ImageListItem >
                                         <img
