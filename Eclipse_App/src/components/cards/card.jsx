@@ -8,7 +8,7 @@ export default function MediaCard(props) {
       <ImageListItem key={1}>
         <img
           src={props.img}
-          alt={'TEST'}
+          alt="Load..."
           loading="lazy"
           className='mobile'
         />

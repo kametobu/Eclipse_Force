@@ -15,7 +15,7 @@ const Page = ({ offset, gradient, onClick, eclipse }) => (
     <>
         <ParallaxLayer offset={offset} speed={0.2} >
             <div className='PAGE_1'>
-                <div className='col_1'>{eclipse?<MediaCard img={`eclipse-solar-${eclipse}.png`} />:<></>}</div>
+                <div className='col_1'>{eclipse?<MediaCard img={`eclipse-solar-${eclipse}.png`}  />:<>LOAD...</>}</div>
                 <div className='Sol'></div>
                 <div className='col_3'></div>
             </div>
