@@ -243,7 +243,6 @@ class Home extends React.Component {
                     <div className='Home-Col_2'>
                         
                         <div><img src='Post.png' /></div>
-                        <div><img src='Follow.png' /></div>
 
                     </div>
                 </div>
